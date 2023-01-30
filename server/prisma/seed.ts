@@ -33,7 +33,7 @@ async function seed() {
       return db.category.create({
         data: {
           name,
-          purchaseId: purchase.id,
+          purchaseId: purchase!.id,
         },
       });
     })
