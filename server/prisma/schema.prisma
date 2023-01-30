@@ -11,16 +11,16 @@ datasource db {
 }
 
 model Purchase {
-  id          Int         @id @default(autoincrement())
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  id          Int        @id @default(autoincrement())
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
   name        String
-  description String
+  description String?
   amount      Float
-  Catergory   Catergory[]
+  Category    Category[]
 }
 
-model Catergory {
+model Category {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
